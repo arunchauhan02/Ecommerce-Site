@@ -1,0 +1,60 @@
+.orderDetailsPage{
+    background-color:white;
+    padding:1.5vmax 8vmax;
+    margin-top:5rem;
+}
+.orderDetailsContainer>h1{
+    font:300 3vmax 'Roboto';
+    margin:2vmax 0vmax;
+}
+.orderDetailsContainerBox{
+    padding:1vmax 2vmax;
+}
+.orderDetailsContainer>p{
+    font-size:2.3vmax;
+}
+.orderDetailsContainerBox>div{
+    display:flex;
+    margin:0.7vmax 0vmax;
+    font:300 1.3vmax 'Roboto';
+}
+.orderDetailsContainerBox>div>p{
+    margin:0px 7px;
+}
+.orderDetailsContainerBox>div>span{
+    color:#6b6161;
+}
+.orderedItemsHeading{
+    padding-top:1.5vmax;
+    font:300 2.4vmax 'Roboto';
+}
+
+.orderDetailsCartItemsContainer{
+    display:flex;
+    flex-direction:column;
+}
+
+.orderDetailsCartItemsContainer>div{
+    margin:2vmax;
+    font:300 1.4vmax 'Roboto';
+    display:flex;
+    align-items:center;
+}
+
+.orderDetailsCartItemsContainer>div>img{
+    height:9vmax;
+    margin:0vmax 3vmax;
+}
+.orderDetailsCartItemsContainer>div>span{
+    margin:0vmax 5vmax;
+}
+.orderDetailsCartItemsContainer>div>a{
+    margin:0vmax 2vmax;
+    font:300 1.3vmax 'Roboto';
+    text-decoration:none;
+    width:30%;
+}
+.orderItems{
+    border-top:1px solid #ccbdbd;
+    padding:2vmax 8.1vmax;
+}
