@@ -4,6 +4,7 @@ import "./imageSlider.css"
 
 const ImageSilder = ({images}) => {
     const [imageIndex, setImageIndex] = useState(0);
+    console.log(images)
 
   function showNextImage() {
     setImageIndex(index => {

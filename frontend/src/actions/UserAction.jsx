@@ -25,8 +25,6 @@ import axios from "axios";
 export const login = (email,password) => async(dispatch)=>{
     try {
         dispatch({type:LOGIN_REQUEST});
-
-        console.log(email,password)
         
         const config = {headers:{'Content-Type':"application/json"}}
         

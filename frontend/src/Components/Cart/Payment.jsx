@@ -13,6 +13,7 @@ import { useSelector } from 'react-redux'
 import {useNavigate} from "react-router-dom";
 import { createOrder } from '../../actions/OrderAction'
 import {useDispatch} from "react-redux";
+import { toast } from 'react-toastify'
 
 const Payment = () => {
   const orderInfo = JSON.parse(sessionStorage.getItem("orderInfo"));
@@ -84,6 +85,16 @@ const Payment = () => {
             status:result.paymentIntent.status
           }
           dispatch(createOrder(order))
+          toast.success('Order placed successfully', {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+            });
           navigate("/success");
         }
         else{

@@ -21,6 +21,7 @@ import {WhatsappShareButton,FacebookShareButton,TwitterShareButton} from 'react-
 import { CiFacebook } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiWhatsapp } from "react-icons/si";
+import ImageSilder from '../Home/ImageSilder';
 
 const ProductDetails = ({setnoOfItems}) => {
 
@@ -75,10 +76,11 @@ const ProductDetails = ({setnoOfItems}) => {
       setqunatity(qunatity+1);
     }
   }
+  const images = product &&  product.images && product.images.map((item)=>item.url);
+  console.log(images ,loading);
   
   const addToCartHandler = ()=>{
     dispatch(addItemsToCart(params.id,qunatity));
-    console.log("added")
     toast.success('Item added successfully to cart', {
       position: "top-right",
       autoClose: 5000,
@@ -116,11 +118,9 @@ const ProductDetails = ({setnoOfItems}) => {
       <Metadata title={`${product.name} - OnlyMenWants`}/>
         <div className="productDetails">
           <div>
-          {<Carousel>
-              {product.images && product.images.map((item,i)=>(
-                <img src={item.url} className='Carosel-img' alt={`${i}Slide`} key={item.url} />
-                ))}
-            </Carousel>}
+            {
+              loading?<Loader/>:product && product.images && <ImageSilder images={images}/>
+            }
           </div>
         </div>
         <div className='detailsBlock'>

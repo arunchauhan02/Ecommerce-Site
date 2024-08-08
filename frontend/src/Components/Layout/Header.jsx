@@ -91,20 +91,21 @@ const Header = ({noOfItems}) => {
                             <img className='site-Logo-sidebar' src={siteLogo} alt="" />
                             <div className='menu-option'>
                                 <li onClick={closed}><Link to="/">Home</Link></li>
-                                <li onClick={closed}><Link to="collections/wallets">Wallets</Link></li>
-                                <li onClick={closed}><Link to="collections/glasses">Glasses</Link></li>
-                                <li onClick={closed}><Link to="collections/rings">Rings</Link></li>
-                                <li onClick={closed}><Link to="collections/shoes">Shoes</Link></li>
+                                <li onClick={closed}><Link to="collections/gods">Gods</Link></li>
+                                <li onClick={closed}><Link to="collections/vintages">Vintages</Link></li>
+                                <li onClick={closed}><Link to="collections/decor">Decor</Link></li>
+                                <li onClick={closed}><Link to="collections/pandents">Pandents</Link></li>
                             </div>
                         </div>
                     </div>
                     <div className="left-menu">
                         <ul className="left-menu-option">
                             <li><Link to="/">Home</Link></li>
-                            <li><Link to="collections/wallets">Wallets</Link></li>
-                            <li><Link to="collections/glasses">Glasses</Link></li>
-                            <li><Link to="collections/rings">Rings</Link></li>
-                            <li><Link to="collections/shoes">Shoes</Link></li>
+                            <li><Link to="collections/gods">Gods</Link></li>
+                            <li><Link to="collections/vintages">Vintages</Link></li>
+                            <li><Link to="collections/decor">Decor</Link></li>
+                            <li><Link to="collections/pandents">Pandents</Link></li>
+                            <li><Link to="collections/dashboard">dashboard</Link></li>
                         </ul>
                     </div>
                 </div>

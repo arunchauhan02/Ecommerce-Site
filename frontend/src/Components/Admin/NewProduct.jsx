@@ -14,6 +14,7 @@ import { NEW_PRODUCT_RESET } from '../../constants/ProductConstant1';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import DiscountOutlinedIcon from '@mui/icons-material/DiscountOutlined';
+import Dashboard from '@material-ui/icons/Dashboard';
 
 const NewProduct = () => {
 
@@ -35,10 +36,12 @@ const NewProduct = () => {
 
 
   const categories = [
-    "shoes",
-    "rings",
-    "glasses",
-    "wallets",
+    "gods",
+    "vintages",
+    "decor",
+    "pandents",
+    "combos",
+    "dashboard"
   ];
 
   useEffect(() => {

@@ -9,6 +9,7 @@
     width:48%;
     padding:1vmax 4vmax;
     box-sizing:border-box;
+    margin:2rem 0rem;
 }
 .Carosel-img{
     width:100%;
@@ -26,6 +27,7 @@
     flex-direction:column;
     //align-items:center;
     padding:1vmax;
+    margin-top:2vmax;
 }
 .detailsBlock1 >h2{
     color:black;
@@ -194,7 +196,7 @@
 }
 .discount>div>p{
     font-family:'Roboto';
-
+    
 }
 .share-option{
     display:flex;
@@ -215,14 +217,10 @@
 @media(width<=1000px){
     .productDetails{
         width:100%;
+        padding:0;
     }
     .detailsBlock{
         display:flex;
-        align-items:center;
-        justify-content:center;
-        width:100%;
-    }
-    .detailsBlock2>p{
-        text-align:center;
+        width:85%;
     }
 }

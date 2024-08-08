@@ -12,6 +12,8 @@ import {useAlert} from 'react-alert'
 import Loader from '../Loader/Loader'
 import {useNavigate,useLocation} from 'react-router-dom';
 import { toast } from 'react-toastify'
+import { CLEAR_ERRORS } from '../../constants/UserConstant'
+import Metadata from '../Layout/Metadata'
 
 const Login = () => {
     const navigate = useNavigate();
@@ -62,17 +64,30 @@ const Login = () => {
     const loginSubmit = (e)=>{
         e.preventDefault();
         dispatch(login(loginEmail,loginPassword));
-        toast("login successfully");
     }
     const {loading,isAuthenticated,error,} = useSelector(state=>state.user);
     
     const redirect = location.search?location.search.split("=")[1]:"/account"
     
     useEffect(() => {
+        if(error){
+            toast.error(error, {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
+        }
         if(isAuthenticated){
             navigate(redirect);
         }
-    }, [navigate,isAuthenticated,redirect])
+        dispatch({type:CLEAR_ERRORS})
+        
+    }, [error,navigate,isAuthenticated,redirect])
     
     
     const switchTab = (e,tab)=>{
@@ -94,6 +109,7 @@ const Login = () => {
 
   return (
     <div>
+        <Metadata title={`Login Registration - OnlyMenWants`}/>
       {loading?<Loader/>:<div className="loginSignUpContainer">
         <div className="loginSignUpBox">
             <div>

@@ -7,6 +7,8 @@ import {useEffect} from 'react'
 import "../../Styles/Profile.css"
 import {logout} from "../../actions/UserAction"
 import MyOrders from '../MyOrders/MyOrders';
+import { toast } from 'react-toastify';
+import Metadata from '../Layout/Metadata';
 
 const Account = () => {
 
@@ -18,6 +20,18 @@ const Account = () => {
     if(isAuthenticated === false){
         navigate("/login")
     }
+    if(isAuthenticated){
+      toast.success('Log in Successfully', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        });
+    }
   }, [navigate,isAuthenticated])
   
   const Logout = ()=>{
@@ -26,6 +40,7 @@ const Account = () => {
 
   return (
     <div>
+      <Metadata title={`${user.name} - OnlyMenWants`}/>
       {
         loading?<Loader/>:
         <div>
@@ -46,7 +61,7 @@ const Account = () => {
               </div>
               <div>
                 <h4>Joined on :</h4>
-                <p>{user.createdAt}</p>
+                <p>{user.createdAt && user.createdAt.slice(0,10)}</p>
               </div>
             </div>
           </div>

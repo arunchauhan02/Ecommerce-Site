@@ -52,8 +52,11 @@ const Home = ({setnoOfItems}) => {
   
   const product = products;
 
-  const carDashBoard = products && products.filter((item)=>item.category==="glasses");
-  const Gods = products && products.filter((item)=>item.category==="rings");
+  const carDashBoard = products && products.filter((item)=>item.category==="dashboard");
+  const Gods = products && products.filter((item)=>item.category==="gods");
+  const vintages = products && products.filter((item)=>item.category==="vintages");
+  const pandents = products && products.filter((item)=>item.category==="pandents");
+  const combos = products && products.filter((item)=>item.category==="combos");
 
   useEffect(() => {
     dispatch(getAllProducts());
@@ -123,7 +126,7 @@ const Home = ({setnoOfItems}) => {
       </h1>
       <div className="latest-combos background">
         <div className="latest-combo-collection">
-          {product && product.map(pr=>(
+          {combos && combos.map(pr=>(
             <Product key={pr._id} pr={pr}/>
           ))}
         </div>
@@ -139,7 +142,7 @@ const Home = ({setnoOfItems}) => {
       <div className='slider'>
         {
           loading?<SmallLoader/>:<Slider {...settings}>
-          {product && product.map(pr=>(
+          {vintages && vintages.map(pr=>(
             <Product key={pr._id} pr={pr}/>
           ))}
           </Slider>
@@ -152,7 +155,7 @@ const Home = ({setnoOfItems}) => {
         God Pandents
       </h1>
       <div className='Pandents-Block'>
-        {product && product.map((item)=>( item.category==="glasses"?<Pandents item={item}/>:""))}
+        {pandents && pandents.map((item)=>( item.category==="glasses"?<Pandents item={item}/>:""))}
       </div>
     </section>
 

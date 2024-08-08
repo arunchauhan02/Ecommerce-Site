@@ -12,6 +12,7 @@ import TransferWithinAStationIcon from "@material-ui/icons/TransferWithinAStatio
 import "../../Styles/Shipping.css";
 import CheckOutSteps from "../Cart/CheckOutSteps.jsx"
 import {useNavigate} from "react-router-dom";
+import { toast } from 'react-toastify'
 
 const Shipping = () => {
     const dispatch = useDispatch();
@@ -27,6 +28,16 @@ const Shipping = () => {
     const shippingSubmit = (e)=>{
         e.preventDefault();
         if(phoneNo.length<10 || phoneNo.length>10){
+            toast.error("please Enter a valid phoneNo", {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "light",
+                });
             return ;
         }
         dispatch(saveShippingInfo({address,city,state,country,pinCode,phoneNo}));

@@ -82,29 +82,31 @@ exports.forgetpassword = catchAsyncError(async(req,res,next)=>{
 
     //get resetpassword token
     const resettoken = await user.getResetPasswordToken();
-
+    
     await user.save({validateBeforeSave:false});
-
+    
     const resetPasswordUrl =`${req.protocol}://${req.get("host")}/password/reset/${resettoken}`;
-
+    
     const message = `Your password reset Token is temp :- \n\n ${resetPasswordUrl} \n\n if you have not request this email then, please ignore it`;
-
+    
     try{
         
         await sendEmail({
             email:user.email,
             subject:"Ecommerce Password Recovery",
             message
-        });
+        },(error)=>{console.log(error)});
 
         res.status(200).json({
             success:true,
             message:`email sent ${user.email} to successfully`
         })
+        console.log(user.email)
 
         
 
     }catch(erorr){
+        console.log(erorr)
         user.resetPasswordToken = undefined;
         user.resetPasswordExpire = undefined;
         user.save();
