@@ -5,6 +5,7 @@ const jwt = require("jsonwebtoken")
 const User = require("../models/usermodel")
 
 exports.isauthenticated = catchasyncerrors(async (req,res,next)=>{
+    console.log("hjjhjk");
     const {token} = req.cookies;
     if(token == "j:null"){
         return next(new ErrorHandler("Please login to access this resourse",401))

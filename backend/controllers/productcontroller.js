@@ -163,6 +163,7 @@ exports.deleteproduct= catchAsyncError(async (req,res)=>{
 })
 
 exports.getproductdetails = catchAsyncError(async (req,res,next)=>{
+    console.loh("ptogfg")
     const product = await Product.findById(req.params.id);
 
     if(!product){
