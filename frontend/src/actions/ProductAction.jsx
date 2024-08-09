@@ -31,7 +31,6 @@ export const getproduct = (currentpage) => async(dispatch)=>{
         dispatch({type:ALL_PRODUCT_REQUEST});
         
         let link = `/api/v1/products?page=${currentpage}`;
-        console.log(currentpage);
         const {data} = await axios.get(link);
 
         dispatch({
@@ -74,7 +73,7 @@ export const getProductDetails = (id)=> async(dispatch)=>{
     try{
         dispatch({type:PRODUCT_DETAILS_REQUEST});
 
-        let {data} = await axios.get(`/api/v1/product/${id}`)
+        let {data} = await axios.get(`/api/v1/product/${id}`);
         dispatch({
             type:PRODUCT_DETAILS_SUCCESS,
             payload:data.product
@@ -183,7 +182,6 @@ export const getAllReviews = (id) => async (dispatch) => {
   export const deleteReviews = (reviewId, productId) => async (dispatch) => {
     try {
       dispatch({ type: DELETE_REVIEW_REQUEST });
-      console.log(reviewId,"kl")
   
       const { data } = await axios.delete(
         `/api/v1/reviews?id=${reviewId}&productId=${productId}`
@@ -204,7 +202,6 @@ export const getAllReviews = (id) => async (dispatch) => {
   export const SearchProduct = (keyword)=>async(dispatch)=>{
     try {
         dispatch({type:SEARCH_PRODUCT_REQUEST});
-        console.log(keyword,"key");
 
         let {data} = await axios.get(`/api/v1/search?keyword=${keyword}`);
 

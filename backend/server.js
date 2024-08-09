@@ -25,7 +25,7 @@ cloudinary.config({
 })
 
 const server = app.listen(process.env.PORT,()=>{
-    console.log(`Server is working at https:\\localhost:${process.env.PORT}`)
+    console.log(`Server is working at https:\\\localhost:${process.env.PORT}`)
 })
 
 //unhandled server rejection

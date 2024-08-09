@@ -77,7 +77,6 @@ const ProductDetails = ({setnoOfItems}) => {
     }
   }
   const images = product &&  product.images && product.images.map((item)=>item.url);
-  console.log(images ,loading);
   
   const addToCartHandler = ()=>{
     dispatch(addItemsToCart(params.id,qunatity));
@@ -191,7 +190,7 @@ const ProductDetails = ({setnoOfItems}) => {
     <div className='reviewssection'>
       <div className='productreviews'>
         {product.reviews && product.reviews[0] ? product.reviews.map((rev)=>(
-          <Review rev={rev}/>
+          <Review rev={rev} key={rev._id}/>
         )):<div className='noReviews'>No Reviews Yet</div>}
       </div>
     </div>
