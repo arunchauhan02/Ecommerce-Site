@@ -2,7 +2,7 @@ import { SINGLE_ITEM_BUY } from "../constants/BuySingleItemConstants";
 import axios from "axios";
 
 // const baseUrl = "https://hj-u6tp.onrender.com"
-const baseUrl = "https://hj-3.onrender.com"
+const baseUrl = "https://kop-xo0l.onrender.com"
 
 
 export const buySingleItem = (id,qunatity)=>async(dispatch,getState)=>{

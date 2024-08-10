@@ -51,7 +51,7 @@ exports.loginUser = catchAsyncError(async(req,res,next)=>{
     const isPasswordMAtched = await user.comaparePassword(password);
 
     if(!isPasswordMAtched){
-        return next(new ErrorHandler("Invalid email or password",401))
+        return next(new ErrorHandler("Invalid email or password",401));
     }
 
     sendtoken(req,user,200,res);

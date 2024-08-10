@@ -28,7 +28,7 @@ import {ALL_PRODUCT_FAIL,ALL_PRODUCT_REQUEST,ALL_PRODUCT_SUCCESS,CLEAR_ERRORS,
 
 
     // const baseUrl = "https://hj-u6tp.onrender.com"
-    const baseUrl = "https://hj-4.onrender.com"
+    const baseUrl = "https://kop-xo0l.onrender.com"
 
 export const getproduct = (currentpage) => async(dispatch)=>{
     try {

@@ -2,7 +2,7 @@ import {ADD_TO_CART,REMOVE_FROM_CART, SAVE_SHIPPING_INFO} from "../constants/Car
 import axios from "axios";
 
 // const baseUrl = "https://hj-u6tp.onrender.com"
-const baseUrl = "https://hj-4.onrender.com"
+const baseUrl = "https://kop-xo0l.onrender.com"
 
 export const addItemsToCart = (id,qunatity)=>async(dispatch,getState)=>{
         let {data} = await axios.get(`${baseUrl}/api/v1/product/${id}`);

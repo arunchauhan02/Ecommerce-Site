@@ -23,7 +23,7 @@ import {
 
 import axios from "axios"
 // const baseUrl = "https://hj-u6tp.onrender.com"
-const baseUrl = "https://hj-4.onrender.com"
+const baseUrl = "https://kop-xo0l.onrender.com"
 
 //create Order
 export const createOrder = (order) => async(dispatch,getState) =>{
