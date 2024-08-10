@@ -101,12 +101,9 @@ exports.forgetpassword = catchAsyncError(async(req,res,next)=>{
             success:true,
             message:`email sent ${user.email} to successfully`
         })
-        console.log(user.email)
-
         
 
     }catch(erorr){
-        console.log(erorr)
         user.resetPasswordToken = undefined;
         user.resetPasswordExpire = undefined;
         user.save();
@@ -140,7 +137,7 @@ exports.resetpassword = catchAsyncError(async (req,res,next)=>{
     console.log(req.body);
     await user.save();
 
-    sendtoken(user,200,res);
+    sendtoken(req,user,200,res);
 })
 
 exports.getUserdetails = catchAsyncError(async(req,res,next)=>{

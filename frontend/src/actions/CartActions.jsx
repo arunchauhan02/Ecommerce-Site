@@ -1,8 +1,11 @@
 import {ADD_TO_CART,REMOVE_FROM_CART, SAVE_SHIPPING_INFO} from "../constants/CartConstatnt"
 import axios from "axios";
 
+// const baseUrl = "https://hj-u6tp.onrender.com"
+const baseUrl = "https://hj-4.onrender.com"
+
 export const addItemsToCart = (id,qunatity)=>async(dispatch,getState)=>{
-        let {data} = await axios.get(`/api/v1/product/${id}`);
+        let {data} = await axios.get(`${baseUrl}/api/v1/product/${id}`);
         dispatch({type:ADD_TO_CART,
             payload:{
                 product:data.product._id,

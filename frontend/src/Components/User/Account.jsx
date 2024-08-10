@@ -40,7 +40,7 @@ const Account = () => {
 
   return (
     <div>
-      <Metadata title={`${user.name} - OnlyMenWants`}/>
+      <Metadata title={`${user && user.name} - OnlyMenWants`}/>
       {
         loading?<Loader/>:
         <div>
@@ -53,15 +53,15 @@ const Account = () => {
             <div className='nameandemail'>
               <div>
                 <h4>Name :</h4>
-                <p>{user.name}</p>
+                <p>{user && user.name}</p>
               </div>
               <div>
                 <h4>Email :</h4>
-                <p>{user.email}</p>
+                <p>{user && user.email}</p>
               </div>
               <div>
                 <h4>Joined on :</h4>
-                <p>{user.createdAt && user.createdAt.slice(0,10)}</p>
+                <p>{user && user.createdAt && user.createdAt.slice(0,10)}</p>
               </div>
             </div>
           </div>
@@ -70,7 +70,7 @@ const Account = () => {
             <Link className='Changepasswordbtn' to="/password/update"><button>Change Password</button></Link>
             <button className='logoutBtn' onClick={Logout}>Log out</button>
             {
-              user.role ==="admin" && <Link className='Changepasswordbtn' to="/admin/dashboard"><button>Dashboard</button></Link>
+              user && user.role ==="admin" && <Link className='Changepasswordbtn' to="/admin/dashboard"><button>Dashboard</button></Link>
             }
             </div>
           </div>
