@@ -54,7 +54,7 @@ exports.loginUser = catchAsyncError(async(req,res,next)=>{
         return next(new ErrorHandler("Invalid email or password",401))
     }
 
-    sendtoken(user,200,res);
+    sendtoken(req,user,200,res);
 
 })
 
@@ -134,7 +134,6 @@ exports.resetpassword = catchAsyncError(async (req,res,next)=>{
     user.resetPasswordToken = undefined;
     user.resetPasswordExpire = undefined;
 
-    console.log(req.body);
     await user.save();
 
     sendtoken(req,user,200,res);
