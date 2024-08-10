@@ -11,7 +11,7 @@ if(process.env.NODE_ENV !== "PRODUCTION"){
     require('dotenv').config({path:"backend/config/config.env"});
 }
 
-const option = { origin: "https://66b79d9a712ea160d4d76410--dainty-kleicha-bd73b6.netlify.app", credentials: true, }
+const option = { origin: "https://66b7a59cab633969873e018c--resplendent-tartufo-2615b9.netlify.app", credentials: true, }
 app.use(cors(option))
 app.use(express.json());
 app.use(cookieParser())
