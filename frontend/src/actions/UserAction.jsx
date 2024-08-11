@@ -33,7 +33,7 @@ export const login = (email,password) => async(dispatch)=>{
         
         let {data} = await axios.post(`${baseUrl}/api/v1/login`,{email,password},config);
 
-        console.log(data)
+        localStorage.setItem("Token",data.token)
         
         dispatch({type:LOGIN_SUCCESS,payload:data.user});
         
