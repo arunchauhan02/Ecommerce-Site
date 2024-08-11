@@ -12,7 +12,7 @@ router.route("/password/forget").post(forgetpassword);
 
 router.route("/password/reset/:token").put(resetpassword);
 
-router.route("/me").get(isauthenticated,getUserdetails)
+router.route("/me").post(isauthenticated,getUserdetails)
 
 router.route("/password/update").put(isauthenticated,updatePassword)
 
