@@ -11,7 +11,7 @@ if(process.env.NODE_ENV !== "PRODUCTION"){
     require('dotenv').config({path:"backend/config/config.env"});
 }
 
-const option = { origin: "https://66b7a59cab633969873e018c--resplendent-tartufo-2615b9.netlify.app", credentials: true, }
+const option = { origin: "http://localhost:3000", credentials: true, }
 app.use(cors(option))
 app.use(express.json());
 app.use(cookieParser())
