@@ -1,4 +1,4 @@
-const User = require("../models/usermodel");
+,const User = require("../models/usermodel");
 const ErrorHandler = require("../util/errorhandler");
 const catchAsyncError = require("../middleware/catchasyncerrors");
 const sendtoken = require("../util/jwttoken");
@@ -169,7 +169,7 @@ exports.updatePassword = catchAsyncError(async (req,res,next)=>{
     user.password = newPassword;
     await user.save();
 
-    sendtoken(user,200,res);
+    sendtoken(req,user,200,res);
 })
 
 
