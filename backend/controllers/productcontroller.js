@@ -178,7 +178,7 @@ exports.getproductdetails = catchAsyncError(async (req,res,next)=>{
 
 //create new review or update review
 exports.createProductReview = catchAsyncError(async(req,res,next)=>{
-    const {rating,comment,productId} = req.body;
+    const {rating,comment,productId} = req.body.reviewData;
     console.log(req.user);
     const review = {
         image:req.user.avatar.url,
