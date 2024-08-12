@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.route("/order/new").post(isauthenticated,newOrder);
 
-router.route("/order/:id").get(isauthenticated,getSingleOrder)
+router.route("/order/:id").post(isauthenticated,getSingleOrder)
 
 router.route("/orders/me").post(isauthenticated,myOrders);
 
