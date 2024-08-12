@@ -31,7 +31,7 @@ exports.createUser = catchAsyncError(async(req,res)=>{
         })
     
 
-    sendtoken(user,201,res);
+    sendtoken(req,user,201,res);
 })
 
 exports.loginUser = catchAsyncError(async(req,res,next)=>{
