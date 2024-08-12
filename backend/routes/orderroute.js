@@ -7,7 +7,7 @@ router.route("/order/new").post(isauthenticated,newOrder);
 
 router.route("/order/:id").get(isauthenticated,getSingleOrder)
 
-router.route("/orders/me").get(isauthenticated,myOrders);
+router.route("/orders/me").post(isauthenticated,myOrders);
 
 router.route("/admin/orders").get(isauthenticated,authorizeRoles("admin"),getAllOrders)
 
