@@ -18,9 +18,9 @@ router.route("/password/update").put(isauthenticated,updatePassword)
 
 router.route("/me/update").put(isauthenticated,updateProfile)
 
-router.route("/admin/users").get(isauthenticated,authorizeRoles("admin"),getAllUsers)
+router.route("/admin/users").post(isauthenticated,authorizeRoles("admin"),getAllUsers)
 
-router.route("/admin/user/:id").get(isauthenticated,authorizeRoles("admin"),getUserDetails)
+router.route("/admin/user/:id").post(isauthenticated,authorizeRoles("admin"),getUserDetails)
     .put(isauthenticated,authorizeRoles("admin"),updateUserRole).delete(isauthenticated,authorizeRoles("admin"),deleteUser);
 
 router.route("/logout").get(LogoutUser)
