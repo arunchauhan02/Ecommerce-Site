@@ -71,7 +71,10 @@ const productsschema = new mongoose.Schema({
                 type:String,
                 // required:true
             },
-            date:Date.now(),
+            date:{
+                type:Date,
+                default:Date.now()
+            },
         }
     ],
     user:{
