@@ -90,7 +90,7 @@ exports.updateOrder = catchAsyncError(async(req,res,next)=>{
     }
 
     
-    if(req.body.status = "Shipped"){
+    if(req.body.status === "Shipped"){
         order.orderItems.forEach(async (o)=>{
             await updateStock(o.product,o.qunatity)
         })
