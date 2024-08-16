@@ -11,7 +11,7 @@ if(process.env.NODE_ENV !== "PRODUCTION"){
     require('dotenv').config({path:"backend/config/config.env"});
 }
 
-const option = { origin: "http://localhost:3000", credentials: true, }
+const option = { origin: true, credentials: true, }
 app.use(cors(option))
 app.use(express.json());
 app.use(cookieParser())
