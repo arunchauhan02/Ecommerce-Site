@@ -85,7 +85,8 @@ exports.forgetpassword = catchAsyncError(async(req,res,next)=>{
     
     await user.save({validateBeforeSave:false});
     
-    const resetPasswordUrl =`${req.protocol}://${req.get("host")}/password/reset/${resettoken}`;
+    // const resetPasswordUrl =`${req.protocol}://${req.get("host")}/password/reset/${resettoken}`;
+    const resetPasswordUrl =`https://66bf0335ac8fdbd1fd807c7f--cosmic-cucurucho-a4836b.netlify.app/password/reset/${resettoken}`;
     
     const message = `Your password reset Token is temp :- \n\n ${resetPasswordUrl} \n\n if you have not request this email then, please ignore it`;
     
