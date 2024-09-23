@@ -88,7 +88,9 @@ exports.forgetpassword = catchAsyncError(async(req,res,next)=>{
     // const resetPasswordUrl =`${req.protocol}://${req.get("host")}/password/reset/${resettoken}`;
     const resetPasswordUrl =`https://66bf0335ac8fdbd1fd807c7f--cosmic-cucurucho-a4836b.netlify.app/password/reset/${resettoken}`;
     
-    const message = `Your password reset Token is temp :- \n\n ${resetPasswordUrl} \n\n if you have not request this email then, please ignore it`;
+    const message = `You're receiving this e-mail because you or someone else has requested a password reset for your
+                    account at. \n\n\n 
+                    Click the link below to reset your password: \n\n ${resetPasswordUrl} \n\n if you have not request this email then, please ignore it`;
     
     try{
         
