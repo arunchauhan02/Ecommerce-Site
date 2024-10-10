@@ -102,7 +102,7 @@ exports.forgetpassword = catchAsyncError(async(req,res,next)=>{
 
         res.status(200).json({
             success:true,
-            message:`email sent ${user.email} to successfully`
+            message:`An email has been sent to ${user.email} successfully`
         })
         
 
