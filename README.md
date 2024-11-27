@@ -10,6 +10,7 @@
 Must have basic knowledge of Node, React, Express, MongoDB.
 
 ## Features
+- Role-Based Access Control (RBAC) User Interface.
 - Node provides the backend environment for this application
 - Express middleware is used to handle requests, routes
 - Mongoose schemas to model the application data
