@@ -1,0 +1,146 @@
+
+.loginSignUpContainer{
+    width:100vw;
+    height:100vh;
+    max-width:100%;
+    display:flex;
+    justify-content:center;
+    background-color:#eef3f2;
+    align-items:center;
+    margin-top:5rem;
+}
+.loginSignUpBox{
+    background-color:white;
+    width:25vw;
+    height:70vh;
+    box-sizing:border-box;
+    transition:all 0.5s;
+    overflow:hidden;
+}
+.login_signup_toggle{
+    display:flex;
+    height:3vmax;
+}
+.login_signup_toggle>p{
+    color:black;
+    font:300 1vmax "Roboto";
+    cursor:pointer;
+    display:grid;
+    place-items:center;
+    width:100%;
+}
+.login_signup_toggle>p:hover{
+    color:tomato;
+}
+.loginSignUpBox>div>button{
+    background-color:tomato;
+    border:none;
+    height:3px;
+    width:50%;
+    border:none;
+    transition:all 0.5s;
+}
+.loginform,.signupform{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:auto;
+    padding:2vmax;
+    height:85%;
+    justify-content:space-evenly;
+    transition:all 0.7s;
+}
+.loginform>div,.signupform>div{
+    display:flex;
+    width:100%;
+    align-items:center;
+    position:relative;
+}
+.signupform{
+    transform: translateY(-100%) translateX(-100vmax);
+}
+.loginform>div>input,.signupform>div>input{
+    padding:1vmax 4.1vmax;
+    padding-right:1vmax;
+    width:100%;
+    box-sizing:border-box;
+}
+.loginform>div>svg,.signupform>div>svg{
+    position:absolute;
+    transform: translateX(1vmax);
+}
+.loginform>a{
+    display:flex;
+    width:100%;
+    justify-content:flex-end;
+    transition:all 0.5s;
+    text-decoration:none;
+}
+.loginform>a:hover{
+    color:black
+}
+.loginBtn,.signinBtn{
+    border:none;
+    background-color:tomato;
+    width:100%;
+    font:300 0.9vmax;
+    padding:0.8vmax;
+    cursor:pointer;
+    color:white;
+    font-size:1.1rem;
+}
+.shiftToNeutral{
+    transform: translateX(0%);
+}
+.shiftToLeft{
+    transform: translateX(-100%);
+}
+.shiftToNeutralForm{
+    transform: translateX(0%) translateY(-100%);
+}
+.shiftToRight{
+    transform: translateX(100%);
+}
+.registerImage>img{
+    height:30px;
+    border-radius:50%;
+    background-color:#ccb6b6;
+}
+.registerImage>input::file-selector-button{
+    cursor:pointer;
+    width:61%;
+    border:none;
+    height:5vh;
+    margin:0%;
+    background-color:#dee5ec94;
+}
+.registerImage>input::file-selector-button:hover{
+    background-color:#c3cad0;
+}
+@media(width<=700px){  
+    .loginSignUpBox{
+        width:60%;
+    }
+}
+@media(width<=500px){  
+    .loginSignUpBox{
+        width:70%;
+    }
+}
+.login-logo{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-logo>img{
+    width:60%;
+}
+.eye{
+    position:absolute;
+    transform:translateX(1vmax);
+    right:2vmax;
+}
+.eye>svg{
+    font-size:20px;
+}
