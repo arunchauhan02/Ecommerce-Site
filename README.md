@@ -36,5 +36,9 @@ This application is deployed on Render(Backend) and Netlify(Frontend) Please che
 
 
 Admin Panel i'd , password
+
+
 email: arunchauhan20234@gmail.com
+
+
 password: Kinetic6251#
