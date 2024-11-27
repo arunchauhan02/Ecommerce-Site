@@ -33,7 +33,8 @@ Instagram Click Here @arunchauhan_02
 
 ## Demo
 This application is deployed on Render(Backend) and Netlify(Frontend) Please check it out 😄 -[https://onlymenwants.netlify.app/login](#here).
-/n
+
+
 Admin Panel i'd , password
 email: arunchauhan20234@gmail.com
 password: Kinetic6251#
