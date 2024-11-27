@@ -29,3 +29,9 @@ Essential Variables PORT= DB_URI = STRIPE_API_KEY= STRIPE_SECRET_KEY= JWT_SECRET
 
 Author
 Instagram Click Here @arunchauhan_02
+
+## Demo
+This application is deployed on Render(Backend) and Netlify(Frontend) Please check it out 😄 here.
+Admin Panel i'd , password
+email: arunchauhan20234@gmail.com
+password: Kinetic6251#
