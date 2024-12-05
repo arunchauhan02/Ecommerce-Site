@@ -32,7 +32,7 @@ Author
 Instagram Click Here @arunchauhan_02
 
 ## Demo
-This application is deployed on Render(Backend) and Netlify(Frontend) Please check it out 😄 -[https://onlymenwants.netlify.app/login](#here).
+This application is deployed on Render(Backend) and Netlify(Frontend) Please check it out 😄 -[https://onlymenwants.netlify.app/login](#here)
 
 
 Admin Panel i'd , password
