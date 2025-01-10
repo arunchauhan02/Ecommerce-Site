@@ -9,7 +9,7 @@ const { url } = require("inspector");
 
 
 exports.createUser = catchAsyncError(async(req,res)=>{
-    const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar,{
+    const myCloud = await cloudinary.v2.uploader.upload_large(req.body.avatar,{
         use_filename:true,
         resource_type:"auto",
         folder:"avatars",
